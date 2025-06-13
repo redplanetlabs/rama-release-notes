@@ -4,6 +4,8 @@ June 2nd, 2025
 
 Monitoring module should be destroyed/redeployed when upgrading.
 
+Clojure API users should use with Clojure 1.12.0.
+
 - Added "instant depot migrations" feature that enables all depot records to be transformed to a new value or removed from the depot. Like PState migrations, depot migrations take effect instantly by applying the depot migration function on read while the contents on disk are migrated in the background. https://redplanetlabs.com/docs/~/depots.html#_migrations
 - Added "module operation log" to Cluster UI that shows all module activity including updates, scales, dynamic option changes, leadership balancing, and microbatch pauses/resumes
 - Directly deleting a subindexed structure now does an efficient ranged delete on disk instead of orphaning the underlying values https://redplanetlabs.com/docs/~/pstates.html#_deleting_subindexed_structures
@@ -38,6 +40,8 @@ Monitoring module should be destroyed/redeployed when upgrading.
 March 18th, 2025
 
 Monitoring module should be destroyed/redeployed when upgrading from a pre-1.0.0 release.
+
+Clojure API users should use with Clojure 1.12.0.
 
 - Add option to specify metadata string with module deploys and updates. Metadata is displayed in the Cluster UI.
 - Add new dynamic option `topology.microbatch.force.delay.millis` to force a delay between microbatches. This creates fewer, larger microbatches that increases latency but reduces overall overhead.
