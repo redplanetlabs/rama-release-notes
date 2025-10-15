@@ -14,7 +14,7 @@ Clojure API users should use Clojure 1.12.2.
 - Add cluster manager function `getDeployedModuleNames` / `deployed-module-name` to get the names of all deployed modules
 - Add default serializers for all primitive array types
 - Add default serializers for some Collections/unmodifiable* types
-- Reduce the amount of RocksDB logs per partition from 10Mb to 1mb
+- Reduce the amount of RocksDB logs per partition from 10MB to 1MB
 - Fix `Ops.CURRENT_MICROBATCH_ID` / `ops/current-microbatch-id` to throw an exception rather than an error when called in a non-microbatch topology
 - Fix cluster UI backend to not spam errors in log when monitoring module is shut down
 - Fix invoking query topologies in outer joins
