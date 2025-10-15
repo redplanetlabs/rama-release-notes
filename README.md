@@ -1,3 +1,27 @@
+# 1.2.0
+
+October 15th, 2025
+
+Clojure API users should use Clojure 1.12.2.
+
+- Added "multi source" feature that enables the same depot to be consumed multiple times by the same topology. Additional sources must provide a "source ID" on the "source" call so progress can be tracked across module updates. The sources will sync with each other once they get close enough and process the exact same offsets together, atomically.  The Cluster UI for the topology has a new section showing which sources are synced or not. Once sources are synced, the module can be updated to remove the multiple sources and combine the code into one source.
+- Add new foreign API on cluster manager to get the latest processed offsets for all partitions of all depots subscribed to by a microbatch topology
+- Make timeout configurable for "wait for microbatch processed count" test facility
+- Upgrade dependencies to resolve CVE warnings
+- Add `cluster.metadata` config for `rama.yaml` of Conductor that gets displayed on top bar of Cluster UI
+- Add `license.dir` config for `rama.yaml` of Conductor
+- Add `Ops.CURRENT_TOPOLOGY-TYPE` / `ops/current-topology-type` functions to get the topology type (stream or microbatch) of topology where the code is running
+- Add cluster manager function `getDeployedModuleNames` / `deployed-module-name` to get the names of all deployed modules
+- Add default serializers for all primitive array types
+- Add default serializers for some Collections/unmodifiable* types
+- Reduce the amount of RocksDB logs per partition from 10Mb to 1mb
+- Fix `Ops.CURRENT_MICROBATCH_ID` / `ops/current-microbatch-id` to throw an exception rather than an error when called in a non-microbatch topology
+- Fix cluster UI backend to not spam errors in log when monitoring module is shut down
+- Fix invoking query topologies in outer joins
+- Fix rare issue during module update where a stall would not be detected when some objects are chronically failing while others are succeeding
+- Fix issue where license warning wouldn't display when there were multiple licenses installed
+- Fix conductor launch to delete its tmp dir so extracted libs don't accumulate
+
 # 1.1.0
 
 June 2nd, 2025
