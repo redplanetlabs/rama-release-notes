@@ -1,3 +1,15 @@
+# 1.3.0
+
+December 12th, 2025
+
+Clojure API users should use Clojure 1.12.2.
+
+- Improve data transfer reliability during module update and scaling when disk is slow
+- Fix replication issues with `subset` and `key` navigators when using proxies on PStates
+- Fix `subselect` transforms not working correctly with active proxy on the PState partition
+- Remove logback transitive dependency inadvertently introduced in 1.2.0
+
+
 # 1.2.0
 
 October 15th, 2025
