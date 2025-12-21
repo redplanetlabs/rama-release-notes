@@ -1,3 +1,14 @@
+# 1.4.0
+
+December 21st, 2025
+
+Clojure API users should use Clojure 1.12.2.
+
+- Fix replication issues when proxies are active by ensuring replicas always use same transform method as leaders
+- Fix issue introduced in 1.3.0 where proxies would resync unnecessarily due to not heartbeating correctly
+- Fix `key` navigator not adding key to PStates with a subscription when key was non-existent and set to `null` by the path
+
+
 # 1.3.0
 
 December 12th, 2025
