@@ -1,3 +1,16 @@
+# 1.5.0
+
+January 23rd, 2026
+
+Clojure API users should use Clojure 1.12.4.
+
+- Improve depot migrations to continue applying migration function to new appends to ease transition for clients appending old records to new records. This now requires depot migration functions to be idempotent.
+- Change foreign clients to have a constant request source to eliminate unbounded session creation when using clients on many threads or virtual threads.
+- Add support for Java 25
+- Add return type hints to `microbatch-topology` and `stream-topology` in Clojure API
+- Bump encore to 3.159.0
+- Fix groupBy to work in single-threaded batch blocks
+
 # 1.4.0
 
 December 21st, 2025
