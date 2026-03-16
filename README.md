@@ -1,3 +1,15 @@
+# 1.6.0
+
+March 16th, 2026
+
+Clojure API users should use Clojure 1.12.4.
+
+- Reduce latency of microbatch processing by eliminating overhead in priming and commit phases and initiating replication of PState changes during processing phase
+- Fix handling of Zookeeper connections so Rama is tolerant to Zookeeper nodes being down
+- Make topology.microbatch.pstate.flush.path.count dynamic option a PState option rather than just a topology option
+- Bump Zookeeper dependency to resolve CVE
+- Downgrade log4j so that %throwable works correctly in log templates
+
 # 1.5.0
 
 January 23rd, 2026
