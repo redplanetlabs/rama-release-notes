@@ -1,3 +1,21 @@
+# 1.7.0
+
+May 27th, 2026
+
+Clojure API users should use Clojure 1.12.4.
+
+- Rama Cluster UI API is now OpenAPI 3.1.0 conformant. The specification is available at `/openapi.json`. This enables AI agents to explore a cluster and debug issues.
+- Expose UUIDv7 helpers in Java as `com.rpl.rama.Helpers#randomUUID7` and Clojure as `com.rpl.rama.ops/random-uuid7`
+- Add `com.rpl.rama.test/with-event-hook` that can be used to get fine-grained information during IPC tests about event execution, RocksDB reads/writes, and more
+- Many improvements to error messages and stack traces
+- Test PStates now implement `vget`
+- Bump commons-io dependency to 2.22.0
+- Bump Netty to 4.2.13.Final
+- Bump Thrift to 0.23.0
+- Fix issue where data transfer on module update or far horizon could wrongly stall when getting bandwidth limited
+- Fix issue downloading log zipfile from cluster node when there are no log files
+- Fix module log on Cluster UI not rendering after unsetting a dynamic option
+
 # 1.6.0
 
 March 16th, 2026
