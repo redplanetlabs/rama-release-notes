@@ -1,3 +1,12 @@
+# 1.8.0
+
+May 29th, 2026
+
+Clojure API users should use Clojure 1.12.4.
+
+- Fix regression from 1.7.0 where destructuring was no longer allowed in arg vectors for `deframaop` / `deframafn`
+- Fix benign import warning
+
 # 1.7.0
 
 May 27th, 2026
