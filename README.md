@@ -1,3 +1,17 @@
+# 1.9.0
+
+July 6th, 2026
+
+Clojure API users should use Clojure 1.12.4.
+
+- Add more value collection manipulation navigators: `transformCollected`, `collectField`, `transformCollectedFields`, and `collectedFieldsView`
+- Add dynamic option target to module log
+- Abort backup if backup provider is not on classpath instead of retrying
+- Fix `merge` with map type returned from sorted range navigators
+- Fix bug when doing yielding select in a microbatch topology that could query a closed RocksDB instance
+- Fix transient mirror query topology invoke error during module update transition
+
+
 # 1.8.0
 
 May 29th, 2026
