@@ -1,3 +1,18 @@
+# 1.10.0
+
+November 12th, 2026
+
+Clojure API users should use Clojure 1.12.6.
+
+Minimum Java version for this release is Java 17.
+
+- Added [replica groups](https://redplanetlabs.com/docs/~/replica-groups.html) feature, enabling different replicas for same task group to be assigned to different availability zones
+- Fixed yielding select on double range navs
+- Fixed cases where backups or backup GC could stall or fail incorrectly
+- Fixed default log4j2.properties file to properly rotate logs
+- Updated dependencies to resolve CVEs
+
+
 # 1.9.0
 
 July 6th, 2026
